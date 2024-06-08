@@ -1,30 +1,60 @@
-# React + TypeScript + Vite
+# PropinaRápida
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+**PropinaRápida** es una aplicación de cálculo de propinas diseñada para restaurantes. Esta herramienta ayuda a los usuarios a calcular rápidamente la propina adecuada basada en el monto de la factura y el porcentaje de propina deseado. El proyecto está desarrollado utilizando React, TypeScript y Tailwind CSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Características
 
-## Expanding the ESLint configuration
+- Cálculo rápido y preciso de propinas.
+- Interfaz de usuario amigable y responsiva.
+- Ajuste personalizado del porcentaje de propina.
+- Visualización del total de la factura incluyendo la propina.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tecnologías Utilizadas
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: Biblioteca de JavaScript para construir interfaces de usuario.
+- **TypeScript**: Un superset de JavaScript que añade tipos estáticos.
+- **Tailwind CSS**: Un framework de CSS para estilizar rápidamente las aplicaciones web.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Requisitos Previos
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Antes de comenzar, asegúrate de tener instalados los siguientes programas en tu máquina:
+
+- Node.js (versión 12 o superior)
+- npm (versión 6 o superior) o yarn (versión 1.22 o superior)
+
+## Instalación
+
+Sigue estos pasos para configurar el proyecto en tu máquina local:
+
+1. Clona este repositorio:
+
+    ```bash
+    git clone https://github.com/tu-usuario/propinarapida.git
+    ```
+
+2. Navega al directorio del proyecto:
+
+    ```bash
+    cd propinarapida
+    ```
+
+3. Instala las dependencias del proyecto:
+
+    ```bash
+    npm install
+    ```
+
+    o si estás usando yarn:
+
+    ```bash
+    yarn install
+    ```
+
+## Uso
+
+Para ejecutar la aplicación en modo de desarrollo, usa el siguiente comando:
+
+```bash
+npm start
