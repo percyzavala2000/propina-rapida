@@ -5,8 +5,8 @@ export type MenuList= {
   name: string;
   price: number;
 }
-export type OrderItem={
-  quantity?:number;
+export type OrderItem = MenuList & {
+  quantity:number;
   
 }
 
