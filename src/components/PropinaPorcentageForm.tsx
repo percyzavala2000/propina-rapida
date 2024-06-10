@@ -19,21 +19,23 @@ const tipOptions = [
 ];
 interface PropinaPorcentageForm {
   setPropina:Dispatch<React.SetStateAction<number>>
+  propina:number;
 }
-export const PropinaPorcentageForm = ({setPropina}:PropinaPorcentageForm ) => {
+export const PropinaPorcentageForm = ({setPropina,propina}:PropinaPorcentageForm ) => {
   return (
     <div>
       <h3 className="font-black text-2xl">Propina:</h3>
       <form action="">
-        {tipOptions.map((propina) => (
-          <div key={propina.id} className="flex gap-2">
-            <label htmlFor={propina.id}> {propina.label} </label>
+        {tipOptions.map((propinaOption) => (
+          <div key={propinaOption.id} className="flex gap-2">
+            <label htmlFor={propinaOption.id}> {propinaOption.label} </label>
             <input
-              id={propina.id}
+              id={propinaOption.id}
               type="radio"
               name="tip"
-              value={propina.value}
+              value={propinaOption.value}
               onChange={e=>setPropina(+e.target.value)}
+              checked={propinaOption.value===propina}
             />
           </div>
         ))}

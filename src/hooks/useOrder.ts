@@ -25,6 +25,11 @@ const removeItem = (id:MenuList['id']) => {
   console.log("eliminando",id)
  }
 
+ const placeOrder = () => { 
+  setOrder([]);
+  setPropina(0);
+  }
+
 
 
 
@@ -33,6 +38,7 @@ const removeItem = (id:MenuList['id']) => {
     propina,
     setPropina,
     addItem,
-    removeItem
+    removeItem,
+    placeOrder
   };
 };
