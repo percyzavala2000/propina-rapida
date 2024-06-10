@@ -4,6 +4,8 @@
 
 **PropinaRápida** es una aplicación de cálculo de propinas diseñada para restaurantes. Esta herramienta ayuda a los usuarios a calcular rápidamente la propina adecuada basada en el monto de la factura y el porcentaje de propina deseado. El proyecto está desarrollado utilizando React, TypeScript y Tailwind CSS.
 
+##Puedes ver el proyecto en el siguiente enlace: [PropinaRápida](https://propinarapida.netlify.app/)
+
 ## Características
 
 - Cálculo rápido y preciso de propinas.
@@ -31,7 +33,7 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
 1. Clona este repositorio:
 
     ```bash
-    git clone https://github.com/tu-usuario/propinarapida.git
+    git clone https://github.com/percyzavala2000/propina-rapida.git
     ```
 
 2. Navega al directorio del proyecto:
@@ -57,4 +59,4 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
 Para ejecutar la aplicación en modo de desarrollo, usa el siguiente comando:
 
 ```bash
-npm start
+npm run dev
