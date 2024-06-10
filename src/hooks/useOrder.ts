@@ -4,6 +4,7 @@ import { MenuList, OrderItem } from "../types/tipos";
 // export const useOrder =  <T extends Object | T extends Array>() => {
 export const useOrder = () => {
   const [order, setOrder] = useState<OrderItem[]>([]);
+  const [propina, setPropina] = useState(0);
 
 
   const addItem = (item: MenuList) => {
@@ -18,11 +19,20 @@ export const useOrder = () => {
       setOrder([...order, newItem]);
     }
   };
+const removeItem = (id:MenuList['id']) => { 
+
+  setOrder(order.filter(item=>item.id!==id));
+  console.log("eliminando",id)
+ }
 
 
-  console.log(order);
+
 
   return {
+    order,
+    propina,
+    setPropina,
     addItem,
+    removeItem
   };
 };

@@ -6,6 +6,10 @@ interface item {
 }
 
 export const MenuItem = ({ item, addItem }: item) => {
+
+
+
+  
   return (
     <button
       className="border-2 border-teal-400 hover:bg-teal-200 w-full p-3 flex justify-between"

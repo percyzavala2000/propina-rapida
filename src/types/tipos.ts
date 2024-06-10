@@ -10,6 +10,11 @@ export type OrderItem = MenuList & {
   
 }
 
+export type OrderContentsProps={
+  order:OrderItem[];
+  removeItem :(item:MenuList['id'])=>void
+}
+
 export type OrderCumstom={
   addItem: (item:MenuList) => void;
 }

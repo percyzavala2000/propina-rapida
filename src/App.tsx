@@ -1,10 +1,13 @@
 import { MenuItem } from "./components/MenuItem";
+import { OrderContents } from './components/OrderContents';
+import { OrderTotal } from './components/OrderTotal';
+import { PropinaPorcentageForm } from './components/PropinaPorcentageForm';
 import { menuItems } from "./database/data";
 import { useOrder } from "./hooks/useOrder";
 
 function App() {
   //cumstom hook
-  const { addItem } = useOrder();
+  const { order,addItem,removeItem,propina,setPropina } = useOrder();
 
   return (
     <>
@@ -21,8 +24,10 @@ function App() {
             ))}
           </div>
         </div>
-        <div className="">
-          <h2>Consumo</h2>
+        <div className="border border-dashed border-slate-300 p-5 rounded-lg space-y-10">
+          <OrderContents  order={order} removeItem ={removeItem } />
+          <PropinaPorcentageForm setPropina={setPropina}/>
+          <OrderTotal order={order} propina={propina} />
         </div>
       </main>
     </>
