@@ -1,4 +1,5 @@
 import { Dispatch } from 'react';
+import { OrderActions } from '../reducers/orderReducer';
 
 const tipOptions = [
   {
@@ -18,10 +19,10 @@ const tipOptions = [
   },
 ];
 interface PropinaPorcentageForm {
-  setPropina:Dispatch<React.SetStateAction<number>>
+  dispatch: Dispatch<OrderActions>
   propina:number;
 }
-export const PropinaPorcentageForm = ({setPropina,propina}:PropinaPorcentageForm ) => {
+export const PropinaPorcentageForm = ({dispatch,propina}:PropinaPorcentageForm ) => {
   return (
     <div>
       <h3 className="font-black text-2xl">Propina:</h3>
@@ -34,7 +35,7 @@ export const PropinaPorcentageForm = ({setPropina,propina}:PropinaPorcentageForm
               type="radio"
               name="tip"
               value={propinaOption.value}
-              onChange={e=>setPropina(+e.target.value)}
+              onChange={e=>dispatch({type:"add-propina",payload:{value:+e.target.value}})}
               checked={propinaOption.value===propina}
             />
           </div>

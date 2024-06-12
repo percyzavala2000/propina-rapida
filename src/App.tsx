@@ -1,13 +1,14 @@
+import { useReducer } from 'react';
 import { MenuItem } from "./components/MenuItem";
 import { OrderContents } from './components/OrderContents';
 import { OrderTotal } from './components/OrderTotal';
 import { PropinaPorcentageForm } from './components/PropinaPorcentageForm';
 import { menuItems } from "./database/data";
-import { useOrder } from "./hooks/useOrder";
+import { initialState, orderReducer } from './reducers/orderReducer';
 
 function App() {
   //cumstom hook
-  const { order,addItem,removeItem,propina,setPropina,placeOrder } = useOrder();
+ const [state,dispatch]=useReducer(orderReducer,initialState);
 
   return (
     <>
@@ -20,17 +21,17 @@ function App() {
 
           <div className=" space-y-3 mt-10">
             {menuItems.map((item) => (
-              <MenuItem key={item.id} item={item} addItem={addItem} />
+              <MenuItem key={item.id} item={item} dispatch={dispatch} />
             ))}
           </div>
         </div>
         <div className="border border-dashed border-slate-300 p-5 rounded-lg space-y-10">
 
-          {order.length>0 ? (
+          {state.order.length>0 ? (
             <>
-            <OrderContents  order={order} removeItem ={removeItem } />
-           <PropinaPorcentageForm propina={propina} setPropina={setPropina}/>
-            <OrderTotal order={order} propina={propina} placeOrder={placeOrder} />
+            <OrderContents  order={state.order} dispatch ={dispatch } />
+           <PropinaPorcentageForm propina={state.propina} dispatch={dispatch}/>
+            <OrderTotal order={state.order} propina={state.propina} dispatch={dispatch} />
             </>
         ):
         (

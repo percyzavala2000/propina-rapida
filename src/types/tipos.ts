@@ -1,3 +1,5 @@
+import { Dispatch } from 'react';
+import { OrderActions } from '../reducers/orderReducer';
 
 
 export type MenuList= {
@@ -12,7 +14,7 @@ export type OrderItem = MenuList & {
 
 export type OrderContentsProps={
   order:OrderItem[];
-  removeItem :(item:MenuList['id'])=>void
+  dispatch: Dispatch<OrderActions>
 }
 
 export type OrderCumstom={
